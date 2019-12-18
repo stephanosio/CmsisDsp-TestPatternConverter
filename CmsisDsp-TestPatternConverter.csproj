@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{EF3CEB52-DEDB-45B8-A7F5-9EDD412A86DB}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>CmsisDsp-TestPatternConverter</RootNamespace>
-    <AssemblyName>CmsisDsp-TestPatternConverter</AssemblyName>
+    <RootNamespace>TestPatternConverter</RootNamespace>
+    <AssemblyName>TestPatternConverter</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,8 +43,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\PatternModel.cs" />
+    <Compile Include="Converters\PatternConverter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Models\TestModel.cs" />
+    <Compile Include="Converters\TestConverter.cs" />
+    <Compile Include="Tests\FastMathTest.cs" />
+    <Compile Include="Tests\ComplexMathTest.cs" />
+    <Compile Include="Tests\BasicMathTest.cs" />
+    <Compile Include="Tests\StatisticsTest.cs" />
+    <Compile Include="Tests\SupportTest.cs" />
+    <Compile Include="Tests\Test.cs" />
+    <Compile Include="Tests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
