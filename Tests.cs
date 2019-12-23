@@ -13,6 +13,7 @@ namespace TestPatternConverter
         public static BasicMathTest BasicMathTest { get; } = new BasicMathTest();
         public static ComplexMathTest ComplexMathTest { get; } = new ComplexMathTest();
         public static FastMathTest FastMathTest { get; } = new FastMathTest();
+        public static MatrixTest MatrixTest { get; } = new MatrixTest();
         public static SupportTest SupportTest { get; } = new SupportTest();
         public static StatisticsTest StatisticsTest { get; } = new StatisticsTest();
     }
