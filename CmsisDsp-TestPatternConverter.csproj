@@ -54,6 +54,7 @@
     <Compile Include="Tests\ComplexMathTest.cs" />
     <Compile Include="Tests\BasicMathTest.cs" />
     <Compile Include="Tests\StatisticsTest.cs" />
+    <Compile Include="Tests\TransformTest.cs" />
     <Compile Include="Tests\SupportTest.cs" />
     <Compile Include="Tests\Test.cs" />
     <Compile Include="Tests.cs" />
