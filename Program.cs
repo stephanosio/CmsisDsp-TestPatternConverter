@@ -20,7 +20,7 @@ namespace TestPatternConverter
             StringWriter writer = new StringWriter();
             TestConverter tc = new TestConverter(TestCodeBasePath, PatternBasePath);
 
-            tc.Convert(writer, TransformTest.Find("transform/src/rf64.c"));
+            tc.Convert(writer, DistanceTest.Find("distance/src/f32.c"));
 
             Console.WriteLine(writer.ToString());
         }
