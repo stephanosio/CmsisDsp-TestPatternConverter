@@ -53,6 +53,7 @@
     <Compile Include="Tests\FastMathTest.cs" />
     <Compile Include="Tests\ComplexMathTest.cs" />
     <Compile Include="Tests\BasicMathTest.cs" />
+    <Compile Include="Tests\BayesTest.cs" />
     <Compile Include="Tests\StatisticsTest.cs" />
     <Compile Include="Tests\DistanceTest.cs" />
     <Compile Include="Tests\TransformTest.cs" />
