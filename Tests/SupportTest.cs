@@ -90,6 +90,20 @@ namespace TestPatternConverter.Tests
                     new PatternModel("uint32_t", "ref_spline_sin", "Reference12_f32.txt"),
                     new PatternModel("uint32_t", "ref_spline_ram", "Reference13_f32.txt")
                 }
+            },
+
+            // F32 Barycenter
+            new TestModel
+            {
+                TestCodePath = "support/src/barycenter_f32.c",
+                PatternRootPath = "SupportBarF32",
+                Patterns = new List<PatternModel>
+                {
+                    new PatternModel("uint32_t", "in_barycenter_val", "Inputs1_f32.txt"),
+                    new PatternModel("uint32_t", "in_barycenter_coeff", "Weights1_f32.txt"),
+                    new PatternModel("uint16_t", "in_barycenter_dims", "Dims1_s16.txt"),
+                    new PatternModel("uint32_t", "ref_barycenter", "Ref1_f32.txt")
+                }
             }
         };
     }
