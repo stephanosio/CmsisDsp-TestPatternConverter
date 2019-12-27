@@ -19,5 +19,6 @@ namespace TestPatternConverter
         public static SupportTest SupportTest { get; } = new SupportTest();
         public static StatisticsTest StatisticsTest { get; } = new StatisticsTest();
         public static BayesTest BayesTest { get; } = new BayesTest();
+        public static SvmTest SvmTest { get; } = new SvmTest();
     }
 }
