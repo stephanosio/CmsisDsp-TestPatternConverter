@@ -20,7 +20,7 @@ namespace TestPatternConverter
             StringWriter writer = new StringWriter();
             TestConverter tc = new TestConverter(TestCodeBasePath, PatternBasePath);
 
-            tc.Convert(writer, SvmTest.Find("svm/src/f32.c"));
+            tc.Convert(writer, FilteringTest.Find("filtering/src/misc_f32.c"));
 
             Console.WriteLine(writer.ToString());
         }
