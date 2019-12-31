@@ -12,7 +12,14 @@ namespace TestPatternConverter.Tests
 
         public virtual TestModel Find(string testCodePath)
         {
-            return TestModels.Single(t => t.TestCodePath == testCodePath);
+            try
+            {
+                return TestModels.Single(t => t.TestCodePath == testCodePath);
+            }
+            catch (Exception ex)
+            {
+                throw new KeyNotFoundException(testCodePath, ex);
+            }
         }
 
         public static Test operator +(Test a, Test b) =>

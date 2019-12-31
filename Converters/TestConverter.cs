@@ -22,10 +22,16 @@ namespace TestPatternConverter.Converters
         /// </summary>
         public string PatternBasePath { get; }
 
-        public TestConverter(string testCodeBasePath, string patternBasePath)
+        /// <summary>
+        /// Display verbose status messages
+        /// </summary>
+        public bool Verbose { get; }
+
+        public TestConverter(string testCodeBasePath, string patternBasePath, bool verbose = false)
         {
             TestCodeBasePath = testCodeBasePath;
             PatternBasePath = patternBasePath;
+            Verbose = verbose;
         }
 
         public void Convert(TestModel test, TextWriter writer)
@@ -40,12 +46,13 @@ namespace TestPatternConverter.Converters
                 // Create pattern converter.
                 //
 
-                PatternConverter pc = new PatternConverter(test, PatternBasePath);
+                PatternConverter pc = new PatternConverter(test, PatternBasePath, Verbose);
 
                 //
                 // Convert pattern.
                 //
 
+                Console.WriteLine($"  Converting pattern {pattern.VariableName} ...");
                 pc.Convert(writer, pattern);
 
                 //
@@ -70,6 +77,11 @@ namespace TestPatternConverter.Converters
             string testCodePatternFileName = $"{testCodeFileName}_patterns{testCodeFileExtension}";
             string testCodePatternFilePath = Path.Combine(testCodeFilePath, testCodePatternFileName);
             string testCodePatternFileFullPath = Path.Combine(TestCodeBasePath, testCodePatternFilePath);
+
+            if (Verbose)
+            {
+                Console.WriteLine($"  Output Test Code Pattern File Path = {testCodePatternFileFullPath}");
+            }
 
             //
             // Open test code pattern file.

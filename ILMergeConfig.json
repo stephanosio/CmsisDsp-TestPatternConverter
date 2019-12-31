@@ -1,0 +1,10 @@
+{
+  "General": {
+    "InputAssemblies": [
+      "CommandLine.dll"
+    ]
+  },
+  "Advanced": {
+    "CopyAttributes": false
+  }
+}

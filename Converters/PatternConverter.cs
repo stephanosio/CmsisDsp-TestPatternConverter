@@ -21,10 +21,16 @@ namespace TestPatternConverter.Converters
         /// </summary>
         public string PatternBasePath { get; }
 
-        public PatternConverter(TestModel test, string patternBasePath)
+        /// <summary>
+        /// Display verbose status messages
+        /// </summary>
+        public bool Verbose { get; }
+
+        public PatternConverter(TestModel test, string patternBasePath, bool verbose = false)
         {
             Test = test;
             PatternBasePath = patternBasePath;
+            Verbose = verbose;
         }
 
         public void Convert(TextWriter writer, PatternModel pattern)
@@ -37,6 +43,11 @@ namespace TestPatternConverter.Converters
                 PatternBasePath, Test.PatternRootPath, pattern.PatternFileName);
 
             StreamReader inputFile = File.OpenText(patternFilePath);
+
+            if (Verbose)
+            {
+                Console.WriteLine($"    Input Pattern File Path = {patternFilePath}");
+            }
 
             //
             // Read input array header.
