@@ -12,7 +12,7 @@ namespace TestPatternConverter
 {
     partial class Program
     {
-        const string TestCodeBasePath = @"TBD";
+        const string TestCodeBasePath = @"Z:\zephyr-public\zephyr\tests\lib\cmsis_dsp";
         const string PatternBasePath = @"Z:\CMSIS_5\CMSIS\DSP\Testing\Patterns\DSP";
 
         static void Main(string[] args)
@@ -20,9 +20,12 @@ namespace TestPatternConverter
             StringWriter writer = new StringWriter();
             TestConverter tc = new TestConverter(TestCodeBasePath, PatternBasePath);
 
-            tc.Convert(writer, FilteringTest.Find("filtering/src/misc_f32.c"));
-
+#if false
+            tc.Convert(Tests.Find("transform/src/q15.c"), writer);
             Console.WriteLine(writer.ToString());
+#else
+            tc.Convert(Tests.Find("transform/src/q15.c"));
+#endif
         }
     }
 }

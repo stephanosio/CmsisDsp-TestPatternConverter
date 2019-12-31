@@ -28,7 +28,7 @@ namespace TestPatternConverter.Converters
             PatternBasePath = patternBasePath;
         }
 
-        public void Convert(TextWriter writer, TestModel test)
+        public void Convert(TestModel test, TextWriter writer)
         {
             //
             // Enumerate all patterns.
@@ -57,8 +57,38 @@ namespace TestPatternConverter.Converters
             }
         }
 
-        /*
-         * TODO: Consider implementing automatic test pattern update in the source code.
-         */
+        public void Convert(TestModel test)
+        {
+            //
+            // Resolve pattern path.
+            //
+
+            string testCodeFilePath = Path.GetDirectoryName(test.TestCodePath);
+            string testCodeFileName = Path.GetFileNameWithoutExtension(test.TestCodePath);
+            string testCodeFileExtension = Path.GetExtension(test.TestCodePath);
+
+            string testCodePatternFileName = $"{testCodeFileName}_patterns{testCodeFileExtension}";
+            string testCodePatternFilePath = Path.Combine(testCodeFilePath, testCodePatternFileName);
+            string testCodePatternFileFullPath = Path.Combine(TestCodeBasePath, testCodePatternFilePath);
+
+            //
+            // Open test code pattern file.
+            //
+
+            FileStream testCodePatternFile = File.OpenWrite(testCodePatternFileFullPath);
+            StreamWriter testCodePatternWriter = new StreamWriter(testCodePatternFile);
+
+            //
+            // Convert test patterns.
+            //
+
+            Convert(test, testCodePatternWriter);
+
+            //
+            // Flush test code pattern file stream.
+            //
+
+            testCodePatternWriter.Flush();
+        }
     }
 }
