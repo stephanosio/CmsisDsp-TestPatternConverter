@@ -7,8 +7,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{EF3CEB52-DEDB-45B8-A7F5-9EDD412A86DB}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>TestPatternConverter</RootNamespace>
-    <AssemblyName>TestPatternConverter</AssemblyName>
+    <RootNamespace>CmsisTestPatternConverter</RootNamespace>
+    <AssemblyName>CmsisTestPatternConverter</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
