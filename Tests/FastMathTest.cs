@@ -7,7 +7,7 @@ namespace TestPatternConverter.Tests
 {
     public class FastMathTest : Test
     {
-        public override IEnumerable<TestModel> Tests { get; } = new List<TestModel>
+        public override IEnumerable<TestModel> TestModels => new List<TestModel>
         {
             //
             // Fast Math Tests

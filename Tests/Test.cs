@@ -6,14 +6,17 @@ using TestPatternConverter.Models;
 
 namespace TestPatternConverter.Tests
 {
-    public abstract class Test
+    public class Test
     {
-        public abstract IEnumerable<TestModel> Tests { get; }
+        public virtual IEnumerable<TestModel> TestModels { get; protected set; }
 
         public virtual TestModel Find(string testCodePath)
         {
-            return Tests.Single(t => t.TestCodePath == testCodePath);
+            return TestModels.Single(t => t.TestCodePath == testCodePath);
         }
+
+        public static Test operator +(Test a, Test b) =>
+            new Test { TestModels = Enumerable.Concat(a.TestModels, b.TestModels) };
     }
 }
  

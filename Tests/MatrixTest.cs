@@ -7,7 +7,7 @@ namespace TestPatternConverter.Tests
 {
     public class MatrixTest : Test
     {
-        public override IEnumerable<TestModel> Tests { get; } = new List<TestModel>
+        public override IEnumerable<TestModel> TestModels { get; protected set; } = new List<TestModel>
         {
             //
             // Matrix Unary Tests
