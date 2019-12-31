@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+ * Copyright (c) 2019 Stephanos Ioannidis <root@stephanos.io>
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
