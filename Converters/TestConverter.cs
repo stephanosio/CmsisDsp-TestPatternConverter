@@ -78,9 +78,8 @@ namespace TestPatternConverter.Converters
 
             string testCodeFilePath = Path.GetDirectoryName(test.TestCodePath);
             string testCodeFileName = Path.GetFileNameWithoutExtension(test.TestCodePath);
-            string testCodeFileExtension = Path.GetExtension(test.TestCodePath);
 
-            string testCodePatternFileName = $"{testCodeFileName}_patterns{testCodeFileExtension}";
+            string testCodePatternFileName = $"{testCodeFileName}.pat";
             string testCodePatternFilePath = Path.Combine(testCodeFilePath, testCodePatternFileName);
             string testCodePatternFileFullPath = Path.Combine(TestCodeBasePath, testCodePatternFilePath);
 
