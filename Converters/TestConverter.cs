@@ -93,7 +93,9 @@ namespace TestPatternConverter.Converters
             // Open test code pattern file.
             //
 
-            FileStream testCodePatternFile = File.OpenWrite(testCodePatternFileFullPath);
+            FileStream testCodePatternFile = File.Open(
+                testCodePatternFileFullPath, FileMode.Create, FileAccess.Write, FileShare.None);
+
             StreamWriter testCodePatternWriter = new StreamWriter(testCodePatternFile);
 
             //
