@@ -114,6 +114,23 @@ namespace TestPatternConverter.Tests
                     new PatternModel("uint32_t", "ref_kl", "RefKL24_f32.txt"),
                     new PatternModel("uint32_t", "ref_logsumexp_dp", "RefLogSumExpDot25_f32.txt")
                 }
+            },
+
+            // F64
+            new TestModel
+            {
+                TestCodePath = "statistics/src/f64.c",
+                PatternRootPath = "Stats/StatsF64",
+                Patterns = new List<PatternModel>
+                {
+                    new PatternModel("uint64_t", "in_entropy", "Input22_f64.txt"),
+                    new PatternModel("q15_t", "in_entropy_dim", "Dims22_s16.txt"),
+                    new PatternModel("uint64_t", "in_kl1", "InputA24_f64.txt"),
+                    new PatternModel("uint64_t", "in_kl2", "InputB24_f64.txt"),
+                    new PatternModel("q15_t", "in_kl_dim", "Dims24_s16.txt"),
+                    new PatternModel("uint64_t", "ref_entropy", "RefEntropy22_f64.txt"),
+                    new PatternModel("uint64_t", "ref_kl", "RefKL24_f64.txt")
+                }
             }
         };
     }
