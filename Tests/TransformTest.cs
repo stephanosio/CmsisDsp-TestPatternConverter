@@ -100,6 +100,79 @@ namespace TestPatternConverter.Tests
                 }
             },
 
+            // RQ15
+            new TestModel
+            {
+                TestCodePath = "transform/src/rq15.c",
+                PatternRootPath = "Transform/TransformQ15",
+                Patterns = new List<PatternModel>
+                {
+                    new PatternModel("q15_t", "in_rfft_noisy_32", "RealInputSamples_Noisy_32_2_q15.txt"),
+                    new PatternModel("q15_t", "in_rifft_noisy_32", "RealInputIFFTSamples_Noisy_32_2_q15.txt"),
+                    new PatternModel("q15_t", "ref_rfft_noisy_32", "RealFFTSamples_Noisy_32_2_q15.txt"),
+
+                    new PatternModel("q15_t", "in_rfft_noisy_64", "RealInputSamples_Noisy_64_3_q15.txt"),
+                    new PatternModel("q15_t", "in_rifft_noisy_64", "RealInputIFFTSamples_Noisy_64_3_q15.txt"),
+                    new PatternModel("q15_t", "ref_rfft_noisy_64", "RealFFTSamples_Noisy_64_3_q15.txt"),
+
+                    new PatternModel("q15_t", "in_rfft_noisy_128", "RealInputSamples_Noisy_128_4_q15.txt"),
+                    new PatternModel("q15_t", "in_rifft_noisy_128", "RealInputIFFTSamples_Noisy_128_4_q15.txt"),
+                    new PatternModel("q15_t", "ref_rfft_noisy_128", "RealFFTSamples_Noisy_128_4_q15.txt"),
+
+                    new PatternModel("q15_t", "in_rfft_noisy_256", "RealInputSamples_Noisy_256_5_q15.txt"),
+                    new PatternModel("q15_t", "in_rifft_noisy_256", "RealInputIFFTSamples_Noisy_256_5_q15.txt"),
+                    new PatternModel("q15_t", "ref_rfft_noisy_256", "RealFFTSamples_Noisy_256_5_q15.txt"),
+
+                    new PatternModel("q15_t", "in_rfft_noisy_512", "RealInputSamples_Noisy_512_6_q15.txt"),
+                    new PatternModel("q15_t", "in_rifft_noisy_512", "RealInputIFFTSamples_Noisy_512_6_q15.txt"),
+                    new PatternModel("q15_t", "ref_rfft_noisy_512", "RealFFTSamples_Noisy_512_6_q15.txt"),
+
+                    new PatternModel("q15_t", "in_rfft_noisy_1024", "RealInputSamples_Noisy_1024_7_q15.txt"),
+                    new PatternModel("q15_t", "in_rifft_noisy_1024", "RealInputIFFTSamples_Noisy_1024_7_q15.txt"),
+                    new PatternModel("q15_t", "ref_rfft_noisy_1024", "RealFFTSamples_Noisy_1024_7_q15.txt"),
+
+                    new PatternModel("q15_t", "in_rfft_noisy_2048", "RealInputSamples_Noisy_2048_8_q15.txt"),
+                    new PatternModel("q15_t", "in_rifft_noisy_2048", "RealInputIFFTSamples_Noisy_2048_8_q15.txt"),
+                    new PatternModel("q15_t", "ref_rfft_noisy_2048", "RealFFTSamples_Noisy_2048_8_q15.txt"),
+
+                    new PatternModel("q15_t", "in_rfft_noisy_4096", "RealInputSamples_Noisy_4096_9_q15.txt"),
+                    new PatternModel("q15_t", "in_rifft_noisy_4096", "RealInputIFFTSamples_Noisy_4096_9_q15.txt"),
+                    new PatternModel("q15_t", "ref_rfft_noisy_4096", "RealFFTSamples_Noisy_4096_9_q15.txt"),
+
+                    new PatternModel("q15_t", "in_rfft_step_32", "RealInputSamples_Step_32_11_q15.txt"),
+                    new PatternModel("q15_t", "in_rifft_step_32", "RealInputIFFTSamples_Step_32_11_q15.txt"),
+                    new PatternModel("q15_t", "ref_rfft_step_32", "RealFFTSamples_Step_32_11_q15.txt"),
+
+                    new PatternModel("q15_t", "in_rfft_step_64", "RealInputSamples_Step_64_12_q15.txt"),
+                    new PatternModel("q15_t", "in_rifft_step_64", "RealInputIFFTSamples_Step_64_12_q15.txt"),
+                    new PatternModel("q15_t", "ref_rfft_step_64", "RealFFTSamples_Step_64_12_q15.txt"),
+
+                    new PatternModel("q15_t", "in_rfft_step_128", "RealInputSamples_Step_128_13_q15.txt"),
+                    new PatternModel("q15_t", "in_rifft_step_128", "RealInputIFFTSamples_Step_128_13_q15.txt"),
+                    new PatternModel("q15_t", "ref_rfft_step_128", "RealFFTSamples_Step_128_13_q15.txt"),
+
+                    new PatternModel("q15_t", "in_rfft_step_256", "RealInputSamples_Step_256_14_q15.txt"),
+                    new PatternModel("q15_t", "in_rifft_step_256", "RealInputIFFTSamples_Step_256_14_q15.txt"),
+                    new PatternModel("q15_t", "ref_rfft_step_256", "RealFFTSamples_Step_256_14_q15.txt"),
+
+                    new PatternModel("q15_t", "in_rfft_step_512", "RealInputSamples_Step_512_15_q15.txt"),
+                    new PatternModel("q15_t", "in_rifft_step_512", "RealInputIFFTSamples_Step_512_15_q15.txt"),
+                    new PatternModel("q15_t", "ref_rfft_step_512", "RealFFTSamples_Step_512_15_q15.txt"),
+
+                    new PatternModel("q15_t", "in_rfft_step_1024", "RealInputSamples_Step_1024_16_q15.txt"),
+                    new PatternModel("q15_t", "in_rifft_step_1024", "RealInputIFFTSamples_Step_1024_16_q15.txt"),
+                    new PatternModel("q15_t", "ref_rfft_step_1024", "RealFFTSamples_Step_1024_16_q15.txt"),
+
+                    new PatternModel("q15_t", "in_rfft_step_2048", "RealInputSamples_Step_2048_17_q15.txt"),
+                    new PatternModel("q15_t", "in_rifft_step_2048", "RealInputIFFTSamples_Step_2048_17_q15.txt"),
+                    new PatternModel("q15_t", "ref_rfft_step_2048", "RealFFTSamples_Step_2048_17_q15.txt"),
+
+                    new PatternModel("q15_t", "in_rfft_step_4096", "RealInputSamples_Step_4096_18_q15.txt"),
+                    new PatternModel("q15_t", "in_rifft_step_4096", "RealInputIFFTSamples_Step_4096_18_q15.txt"),
+                    new PatternModel("q15_t", "ref_rfft_step_4096", "RealFFTSamples_Step_4096_18_q15.txt")
+                }
+            },
+
             // CQ31
             new TestModel
             {
@@ -178,6 +251,79 @@ namespace TestPatternConverter.Tests
                     new PatternModel("q31_t", "in_cfft_step_4096", "ComplexInputSamples_Step_4096_18_q31.txt"),
                     new PatternModel("q31_t", "in_cifft_step_4096", "ComplexInputIFFTSamples_Step_4096_18_q31.txt"),
                     new PatternModel("q31_t", "ref_cfft_step_4096", "ComplexFFTSamples_Step_4096_18_q31.txt")
+                }
+            },
+
+            // RQ31
+            new TestModel
+            {
+                TestCodePath = "transform/src/rq31.c",
+                PatternRootPath = "Transform/TransformQ31",
+                Patterns = new List<PatternModel>
+                {
+                    new PatternModel("q31_t", "in_rfft_noisy_32", "RealInputSamples_Noisy_32_2_q31.txt"),
+                    new PatternModel("q31_t", "in_rifft_noisy_32", "RealInputIFFTSamples_Noisy_32_2_q31.txt"),
+                    new PatternModel("q31_t", "ref_rfft_noisy_32", "RealFFTSamples_Noisy_32_2_q31.txt"),
+
+                    new PatternModel("q31_t", "in_rfft_noisy_64", "RealInputSamples_Noisy_64_3_q31.txt"),
+                    new PatternModel("q31_t", "in_rifft_noisy_64", "RealInputIFFTSamples_Noisy_64_3_q31.txt"),
+                    new PatternModel("q31_t", "ref_rfft_noisy_64", "RealFFTSamples_Noisy_64_3_q31.txt"),
+
+                    new PatternModel("q31_t", "in_rfft_noisy_128", "RealInputSamples_Noisy_128_4_q31.txt"),
+                    new PatternModel("q31_t", "in_rifft_noisy_128", "RealInputIFFTSamples_Noisy_128_4_q31.txt"),
+                    new PatternModel("q31_t", "ref_rfft_noisy_128", "RealFFTSamples_Noisy_128_4_q31.txt"),
+
+                    new PatternModel("q31_t", "in_rfft_noisy_256", "RealInputSamples_Noisy_256_5_q31.txt"),
+                    new PatternModel("q31_t", "in_rifft_noisy_256", "RealInputIFFTSamples_Noisy_256_5_q31.txt"),
+                    new PatternModel("q31_t", "ref_rfft_noisy_256", "RealFFTSamples_Noisy_256_5_q31.txt"),
+
+                    new PatternModel("q31_t", "in_rfft_noisy_512", "RealInputSamples_Noisy_512_6_q31.txt"),
+                    new PatternModel("q31_t", "in_rifft_noisy_512", "RealInputIFFTSamples_Noisy_512_6_q31.txt"),
+                    new PatternModel("q31_t", "ref_rfft_noisy_512", "RealFFTSamples_Noisy_512_6_q31.txt"),
+
+                    new PatternModel("q31_t", "in_rfft_noisy_1024", "RealInputSamples_Noisy_1024_7_q31.txt"),
+                    new PatternModel("q31_t", "in_rifft_noisy_1024", "RealInputIFFTSamples_Noisy_1024_7_q31.txt"),
+                    new PatternModel("q31_t", "ref_rfft_noisy_1024", "RealFFTSamples_Noisy_1024_7_q31.txt"),
+
+                    new PatternModel("q31_t", "in_rfft_noisy_2048", "RealInputSamples_Noisy_2048_8_q31.txt"),
+                    new PatternModel("q31_t", "in_rifft_noisy_2048", "RealInputIFFTSamples_Noisy_2048_8_q31.txt"),
+                    new PatternModel("q31_t", "ref_rfft_noisy_2048", "RealFFTSamples_Noisy_2048_8_q31.txt"),
+
+                    new PatternModel("q31_t", "in_rfft_noisy_4096", "RealInputSamples_Noisy_4096_9_q31.txt"),
+                    new PatternModel("q31_t", "in_rifft_noisy_4096", "RealInputIFFTSamples_Noisy_4096_9_q31.txt"),
+                    new PatternModel("q31_t", "ref_rfft_noisy_4096", "RealFFTSamples_Noisy_4096_9_q31.txt"),
+
+                    new PatternModel("q31_t", "in_rfft_step_32", "RealInputSamples_Step_32_11_q31.txt"),
+                    new PatternModel("q31_t", "in_rifft_step_32", "RealInputIFFTSamples_Step_32_11_q31.txt"),
+                    new PatternModel("q31_t", "ref_rfft_step_32", "RealFFTSamples_Step_32_11_q31.txt"),
+
+                    new PatternModel("q31_t", "in_rfft_step_64", "RealInputSamples_Step_64_12_q31.txt"),
+                    new PatternModel("q31_t", "in_rifft_step_64", "RealInputIFFTSamples_Step_64_12_q31.txt"),
+                    new PatternModel("q31_t", "ref_rfft_step_64", "RealFFTSamples_Step_64_12_q31.txt"),
+
+                    new PatternModel("q31_t", "in_rfft_step_128", "RealInputSamples_Step_128_13_q31.txt"),
+                    new PatternModel("q31_t", "in_rifft_step_128", "RealInputIFFTSamples_Step_128_13_q31.txt"),
+                    new PatternModel("q31_t", "ref_rfft_step_128", "RealFFTSamples_Step_128_13_q31.txt"),
+
+                    new PatternModel("q31_t", "in_rfft_step_256", "RealInputSamples_Step_256_14_q31.txt"),
+                    new PatternModel("q31_t", "in_rifft_step_256", "RealInputIFFTSamples_Step_256_14_q31.txt"),
+                    new PatternModel("q31_t", "ref_rfft_step_256", "RealFFTSamples_Step_256_14_q31.txt"),
+
+                    new PatternModel("q31_t", "in_rfft_step_512", "RealInputSamples_Step_512_15_q31.txt"),
+                    new PatternModel("q31_t", "in_rifft_step_512", "RealInputIFFTSamples_Step_512_15_q31.txt"),
+                    new PatternModel("q31_t", "ref_rfft_step_512", "RealFFTSamples_Step_512_15_q31.txt"),
+
+                    new PatternModel("q31_t", "in_rfft_step_1024", "RealInputSamples_Step_1024_16_q31.txt"),
+                    new PatternModel("q31_t", "in_rifft_step_1024", "RealInputIFFTSamples_Step_1024_16_q31.txt"),
+                    new PatternModel("q31_t", "ref_rfft_step_1024", "RealFFTSamples_Step_1024_16_q31.txt"),
+
+                    new PatternModel("q31_t", "in_rfft_step_2048", "RealInputSamples_Step_2048_17_q31.txt"),
+                    new PatternModel("q31_t", "in_rifft_step_2048", "RealInputIFFTSamples_Step_2048_17_q31.txt"),
+                    new PatternModel("q31_t", "ref_rfft_step_2048", "RealFFTSamples_Step_2048_17_q31.txt"),
+
+                    new PatternModel("q31_t", "in_rfft_step_4096", "RealInputSamples_Step_4096_18_q31.txt"),
+                    new PatternModel("q31_t", "in_rifft_step_4096", "RealInputIFFTSamples_Step_4096_18_q31.txt"),
+                    new PatternModel("q31_t", "ref_rfft_step_4096", "RealFFTSamples_Step_4096_18_q31.txt")
                 }
             },
 
