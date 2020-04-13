@@ -56,10 +56,10 @@ namespace TestPatternConverter.Tests
                     new PatternModel("q7_t", "ref_shift", "Shift21_q7.txt"),
                     new PatternModel("q7_t", "ref_shift_possat", "Shift22_q7.txt"),
                     new PatternModel("q7_t", "ref_shift_negsat", "Shift23_q7.txt"),
-                    new PatternModel("q7_t", "ref_and", "And24_s8.txt"),
-                    new PatternModel("q7_t", "ref_or", "Or25_s8.txt"),
-                    new PatternModel("q7_t", "ref_not", "Not26_s8.txt"),
-                    new PatternModel("q7_t", "ref_xor", "Xor27_s8.txt")
+                    new PatternModel("u8_t", "ref_and", "And24_s8.txt"),
+                    new PatternModel("u8_t", "ref_or", "Or25_s8.txt"),
+                    new PatternModel("u8_t", "ref_not", "Not26_s8.txt"),
+                    new PatternModel("u8_t", "ref_xor", "Xor27_s8.txt")
                 }
             },
 
@@ -100,10 +100,10 @@ namespace TestPatternConverter.Tests
                     new PatternModel("q15_t", "ref_shift", "Shift21_q15.txt"),
                     new PatternModel("q15_t", "ref_shift_possat", "Shift22_q15.txt"),
                     new PatternModel("q15_t", "ref_shift_negsat", "Shift23_q15.txt"),
-                    new PatternModel("q15_t", "ref_and", "And24_s16.txt"),
-                    new PatternModel("q15_t", "ref_or", "Or25_s16.txt"),
-                    new PatternModel("q15_t", "ref_not", "Not26_s16.txt"),
-                    new PatternModel("q15_t", "ref_xor", "Xor27_s16.txt")
+                    new PatternModel("u16_t", "ref_and", "And24_s16.txt"),
+                    new PatternModel("u16_t", "ref_or", "Or25_s16.txt"),
+                    new PatternModel("u16_t", "ref_not", "Not26_s16.txt"),
+                    new PatternModel("u16_t", "ref_xor", "Xor27_s16.txt")
                 }
             },
 
@@ -144,10 +144,10 @@ namespace TestPatternConverter.Tests
                     new PatternModel("q31_t", "ref_shift", "Shift21_q31.txt"),
                     new PatternModel("q31_t", "ref_shift_possat", "Shift22_q31.txt"),
                     new PatternModel("q31_t", "ref_shift_negsat", "Shift23_q31.txt"),
-                    new PatternModel("q31_t", "ref_and", "And24_s32.txt"),
-                    new PatternModel("q31_t", "ref_or", "Or25_s32.txt"),
-                    new PatternModel("q31_t", "ref_not", "Not26_s32.txt"),
-                    new PatternModel("q31_t", "ref_xor", "Xor27_s32.txt")
+                    new PatternModel("u32_t", "ref_and", "And24_s32.txt"),
+                    new PatternModel("u32_t", "ref_or", "Or25_s32.txt"),
+                    new PatternModel("u32_t", "ref_not", "Not26_s32.txt"),
+                    new PatternModel("u32_t", "ref_xor", "Xor27_s32.txt")
                 }
             },
 
