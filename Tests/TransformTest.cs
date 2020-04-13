@@ -19,10 +19,10 @@ namespace TestPatternConverter.Tests
             // Transform Tests
             //
 
-            // Q15
+            // CQ15
             new TestModel
             {
-                TestCodePath = "transform/src/q15.c",
+                TestCodePath = "transform/src/cq15.c",
                 PatternRootPath = "Transform/TransformQ15",
                 Patterns = new List<PatternModel>
                 {
@@ -100,10 +100,10 @@ namespace TestPatternConverter.Tests
                 }
             },
 
-            // Q31
+            // CQ31
             new TestModel
             {
-                TestCodePath = "transform/src/q31.c",
+                TestCodePath = "transform/src/cq31.c",
                 PatternRootPath = "Transform/TransformQ31",
                 Patterns = new List<PatternModel>
                 {
