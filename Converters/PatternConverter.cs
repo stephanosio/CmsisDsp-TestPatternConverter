@@ -80,6 +80,30 @@ namespace TestPatternConverter.Converters
             }
 
             //
+            // Resolve line change criteria.
+            //
+
+            int lineChangeAlignment;
+
+            switch (inputArrayType)
+            {
+                case "B":
+                    lineChangeAlignment = 8;
+                    break;
+                case "H":
+                    lineChangeAlignment = 8;
+                    break;
+                case "W":
+                    lineChangeAlignment = 4;
+                    break;
+                case "D":
+                    lineChangeAlignment = 2;
+                    break;
+                default:
+                    throw new Exception("Invalid input array type");
+            }
+
+            //
             // Generate array header.
             //
 
@@ -113,39 +137,16 @@ namespace TestPatternConverter.Converters
                 /* Add separator if not last */
                 if (index != (inputArrayLength - 1))
                 {
-                    writer.Write(", ");
-
-                    /* Set line change criteria */
-                    int lineChangeAlignment;
-
-                    switch (inputArrayType)
-                    {
-                        case "B":
-                            lineChangeAlignment = 8;
-                            break;
-                        case "H":
-                            lineChangeAlignment = 8;
-                            break;
-                        case "W":
-                            lineChangeAlignment = 4;
-                            break;
-                        case "D":
-                            lineChangeAlignment = 2;
-                            break;
-                        default:
-                            throw new Exception("Invalid input array type");
-                    }
-
                     /* Change line at the specified criteria */
                     if (((index + 1) % lineChangeAlignment) == 0)
                     {
-                        writer.WriteLine();
+                        writer.WriteLine(",");
                         writer.Write("    ");
                     }
-                }
-                else
-                {
-                    writer.Write(" ");
+                    else
+                    {
+                        writer.Write(", ");
+                    }
                 }
             }
 
