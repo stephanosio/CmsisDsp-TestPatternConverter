@@ -1,6 +1,9 @@
 ## CMSIS (DSP, NN) Test Pattern Converter
 
-The CMSIS Test Pattern Converter (CmsisTestPatternConverter) utility converts the automatically generated test pattern text files included in the official CMSIS distribution (ARM-software/CMSIS_5/CMSIS/DSP/Testing/Patterns) to the C array files used by the Zephyr RTOS test suite.
+The CMSIS Test Pattern Converter (CmsisTestPatternConverter) utility converts the automatically
+generated test pattern text files included in the official CMSIS distribution
+(`ARM-software/CMSIS_5/CMSIS/DSP/Testing/Patterns`) to the C array files used by the Zephyr RTOS
+test suite.
 
 ### Usage
 
@@ -21,5 +24,6 @@ The CMSIS Test Pattern Converter (CmsisTestPatternConverter) utility converts th
 
 ### Notes
 
-- This utility is supported on both Windows and Linux (macOS should work too, but is not tested).
-- Mono Runtime is required to run this utility on Linux (tested with Mono 6.6.0.161).
+- This utility is supported on Linux, macOS and Windows.
+- [.NET 5 Runtime](https://dotnet.microsoft.com/download/dotnet/5.0) is required to run this
+  utility.
