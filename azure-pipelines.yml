@@ -1,0 +1,69 @@
+trigger:
+- master
+- refs/tags/*
+
+strategy:
+  matrix:
+    linux:
+      imageName: 'ubuntu-latest'
+      osName: 'linux'
+      archiveType: 'tar'
+      tarCompression: 'gz'
+      archiveExt: 'tar.gz'
+    macos:
+      imageName: 'macos-latest'
+      osName: 'macos'
+      archiveType: 'tar'
+      tarCompression: 'gz'
+      archiveExt: 'tar.gz'
+    windows:
+      imageName: 'windows-latest'
+      osName: 'windows'
+      archiveType: 'zip'
+      archiveExt: 'zip'
+
+pool:
+  vmImage: $(imageName)
+
+variables:
+  buildConfiguration: 'Release'
+  archiveName: 'CmsisTestPatternGenerator-$(osName).$(archiveExt)'
+
+steps:
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'restore'
+    projects: 'CmsisTestPatternConverter.csproj'
+  displayName: 'Restore NuGet packages'
+
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'build'
+    projects: 'CmsisTestPatternConverter.csproj'
+    arguments: '--no-restore'
+  displayName: 'Build'
+
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'publish'
+    publishWebProjects: false
+    projects: 'CmsisTestPatternConverter.csproj'
+    arguments: '--configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)/publish --no-restore'
+    zipAfterPublish: false
+    modifyOutputPath: false
+  displayName: 'Publish'
+
+- task: ArchiveFiles@2
+  inputs:
+    rootFolderOrFile: '$(Build.ArtifactStagingDirectory)/publish'
+    includeRootFolder: false
+    archiveType: $(archiveType)
+    tarCompression: $(tarCompression)
+    archiveFile: '$(Build.ArtifactStagingDirectory)/$(archiveName)'
+  displayName: 'Archive'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathToPublish: '$(Build.ArtifactStagingDirectory)/$(archiveName)'
+    artifactName: CmsisTestPatternGenerator-$(osName)
+  displayName: 'Upload'
