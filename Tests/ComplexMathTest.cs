@@ -61,6 +61,27 @@ namespace TestPatternConverter.Tests
                 }
             },
 
+            // F16
+            new TestModel
+            {
+                TestCodePath = "complexmath/src/f16.c",
+                PatternRootPath = "ComplexMaths/ComplexMathsF16",
+                Patterns = new List<PatternModel>
+                {
+                    new PatternModel("uint16_t", "in_com1", "Input1_f16.txt"),
+                    new PatternModel("uint16_t", "in_com2", "Input2_f16.txt"),
+                    new PatternModel("uint16_t", "in_com3", "Input3_f16.txt"),
+                    new PatternModel("uint16_t", "ref_conj", "Reference1_f16.txt"),
+                    new PatternModel("uint16_t", "ref_dot_prod_3", "Reference2_f16.txt"),
+                    new PatternModel("uint16_t", "ref_dot_prod_4n", "Reference3_f16.txt"),
+                    new PatternModel("uint16_t", "ref_dot_prod_4n1", "Reference4_f16.txt"),
+                    new PatternModel("uint16_t", "ref_mag", "Reference5_f16.txt"),
+                    new PatternModel("uint16_t", "ref_mag_squared", "Reference6_f16.txt"),
+                    new PatternModel("uint16_t", "ref_mult_cmplx", "Reference7_f16.txt"),
+                    new PatternModel("uint16_t", "ref_mult_real", "Reference8_f16.txt")
+                }
+            },
+
             // F32
             new TestModel
             {
