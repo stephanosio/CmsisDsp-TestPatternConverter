@@ -19,6 +19,21 @@ namespace TestPatternConverter.Tests
             // Bayes Tests
             //
 
+            // F16
+            new TestModel
+            {
+                TestCodePath = "bayes/src/f16.c",
+                PatternRootPath = "Bayes/BayesF16",
+                Patterns = new List<PatternModel>
+                {
+                    new PatternModel("uint16_t", "in_val", "Inputs1_f16.txt"),
+                    new PatternModel("uint16_t", "in_dims", "Dims1_s16.txt"),
+                    new PatternModel("uint16_t", "in_param", "Params1_f16.txt"),
+                    new PatternModel("uint16_t", "ref_prob", "Probas1_f16.txt"),
+                    new PatternModel("uint16_t", "ref_pred", "Predicts1_s16.txt")
+                }
+            },
+
             // F32
             new TestModel
             {
