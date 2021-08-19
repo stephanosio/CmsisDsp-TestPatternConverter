@@ -28,9 +28,13 @@ namespace TestPatternConverter.Tests
                 {
                     new PatternModel("q15_t", "in_angles", "Angles1_q15.txt"),
                     new PatternModel("q15_t", "in_sqrt", "SqrtInput1_q15.txt"),
+                    new PatternModel("q15_t", "in_divide_num", "Numerator1_q15.txt"),
+                    new PatternModel("q15_t", "in_divide_den", "Denominator1_q15.txt"),
                     new PatternModel("q15_t", "ref_cos", "Cos1_q15.txt"),
                     new PatternModel("q15_t", "ref_sin", "Sin1_q15.txt"),
-                    new PatternModel("q15_t", "ref_sqrt", "Sqrt1_q15.txt")
+                    new PatternModel("q15_t", "ref_sqrt", "Sqrt1_q15.txt"),
+                    new PatternModel("q15_t", "ref_divide", "DivisionValue1_q15.txt"),
+                    new PatternModel("uint16_t", "ref_divide_shift", "DivisionShift1_s16.txt")
                 }
             },
 
@@ -46,6 +50,27 @@ namespace TestPatternConverter.Tests
                     new PatternModel("q31_t", "ref_cos", "Cos1_q31.txt"),
                     new PatternModel("q31_t", "ref_sin", "Sin1_q31.txt"),
                     new PatternModel("q31_t", "ref_sqrt", "Sqrt1_q31.txt")
+                }
+            },
+
+            // F16
+            new TestModel
+            {
+                TestCodePath = "fastmath/src/f16.c",
+                PatternRootPath = "FastMath/FastMathF16",
+                Patterns = new List<PatternModel>
+                {
+                    new PatternModel("uint16_t", "in_angles", "Angles1_f16.txt"),
+                    new PatternModel("uint16_t", "in_sqrt", "SqrtInput1_f16.txt"),
+                    new PatternModel("uint16_t", "in_log", "LogInput1_f16.txt"),
+                    new PatternModel("uint16_t", "in_exp", "ExpInput1_f16.txt"),
+                    new PatternModel("uint16_t", "in_vinverse", "Samples1_f16.txt"),
+                    new PatternModel("uint16_t", "ref_cos", "Cos1_f16.txt"),
+                    new PatternModel("uint16_t", "ref_sin", "Sin1_f16.txt"),
+                    new PatternModel("uint16_t", "ref_sqrt", "Sqrt1_f16.txt"),
+                    new PatternModel("uint16_t", "ref_log", "Log1_f16.txt"),
+                    new PatternModel("uint16_t", "ref_exp", "Exp1_f16.txt"),
+                    new PatternModel("uint16_t", "ref_vinverse", "Inverse1_f16.txt")
                 }
             },
 
