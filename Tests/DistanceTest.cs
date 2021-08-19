@@ -41,6 +41,31 @@ namespace TestPatternConverter.Tests
                 }
             },
 
+            // F16
+            new TestModel
+            {
+                TestCodePath = "distance/src/f16.c",
+                PatternRootPath = "Distance/DistanceF16",
+                Patterns = new List<PatternModel>
+                {
+                    new PatternModel("uint16_t", "in_com1", "InputA1_f16.txt"),
+                    new PatternModel("uint16_t", "in_com2", "InputB1_f16.txt"),
+                    new PatternModel("uint16_t", "in_jen1", "InputA8_f16.txt"),
+                    new PatternModel("uint16_t", "in_jen2", "InputB8_f16.txt"),
+                    new PatternModel("uint16_t", "in_dims", "Dims1_s16.txt"),
+                    new PatternModel("uint16_t", "in_dims_minkowski", "Dims9_s16.txt"),
+                    new PatternModel("uint16_t", "ref_braycurtis", "Ref1_f16.txt"),
+                    new PatternModel("uint16_t", "ref_canberra", "Ref2_f16.txt"),
+                    new PatternModel("uint16_t", "ref_chebyshev", "Ref3_f16.txt"),
+                    new PatternModel("uint16_t", "ref_cityblock", "Ref4_f16.txt"),
+                    new PatternModel("uint16_t", "ref_correlation", "Ref5_f16.txt"),
+                    new PatternModel("uint16_t", "ref_cosine", "Ref6_f16.txt"),
+                    new PatternModel("uint16_t", "ref_euclidean", "Ref7_f16.txt"),
+                    new PatternModel("uint16_t", "ref_jensenshannon", "Ref8_f16.txt"),
+                    new PatternModel("uint16_t", "ref_minkowski", "Ref9_f16.txt")
+                }
+            },
+
             // F32
             new TestModel
             {
