@@ -45,6 +45,28 @@ namespace TestPatternConverter.Tests
                 }
             },
 
+            // F16
+            new TestModel
+            {
+                TestCodePath = "filtering/src/biquad_f16.c",
+                PatternRootPath = "Filtering/BIQUAD/BIQUADF16",
+                Patterns = new List<PatternModel>
+                {
+                    new PatternModel("uint16_t", "in_default_val", "BiquadInput1_f16.txt"),
+                    new PatternModel("uint16_t", "in_default_coeff", "BiquadCoefs1_f16.txt"),
+                    new PatternModel("uint16_t", "ref_default", "BiquadOutput1_f16.txt"),
+
+                    new PatternModel("uint16_t", "in_rand_coeff", "AllBiquadCoefs2_f16.txt"),
+                    new PatternModel("uint16_t", "in_rand_config", "AllBiquadConfigs2_s16.txt"),
+
+                    new PatternModel("uint16_t", "in_rand_mono_val", "AllBiquadInputs2_f16.txt"),
+                    new PatternModel("uint16_t", "ref_rand_mono", "AllBiquadRefs2_f16.txt"),
+
+                    new PatternModel("uint16_t", "in_rand_stereo_val", "AllBiquadStereoInputs2_f16.txt"),
+                    new PatternModel("uint16_t", "ref_rand_stereo", "AllBiquadStereoRefs2_f16.txt")
+                }
+            },
+
             // F32
             new TestModel
             {
@@ -83,6 +105,64 @@ namespace TestPatternConverter.Tests
 
                     new PatternModel("uint64_t", "in_rand_mono_val", "AllBiquadInputs2_f64.txt"),
                     new PatternModel("uint64_t", "ref_rand_mono", "AllBiquadRefs2_f64.txt")
+                }
+            },
+
+            //
+            // Filtering DECIM Tests
+            //
+
+            // Q15
+            new TestModel
+            {
+                TestCodePath = "filtering/src/decim_q15.c",
+                PatternRootPath = "Filtering/DECIM/DECIMQ15",
+                Patterns = new List<PatternModel>
+                {
+                    new PatternModel("q15_t", "in_val_decim", "Input2_q15.txt"),
+                    new PatternModel("q15_t", "in_coeff_decim", "Coefs2_q15.txt"),
+                    new PatternModel("uint32_t", "in_config_decim", "Configs2_u32.txt"),
+                    new PatternModel("q15_t", "in_val_interp", "Input3_q15.txt"),
+                    new PatternModel("q15_t", "in_coeff_interp", "Coefs3_q15.txt"),
+                    new PatternModel("uint32_t", "in_config_interp", "Configs3_u32.txt"),
+                    new PatternModel("q15_t", "ref_decim", "Reference2_q15.txt"),
+                    new PatternModel("q15_t", "ref_interp", "Reference3_q15.txt")
+                }
+            },
+
+            // Q31
+            new TestModel
+            {
+                TestCodePath = "filtering/src/decim_q31.c",
+                PatternRootPath = "Filtering/DECIM/DECIMQ31",
+                Patterns = new List<PatternModel>
+                {
+                    new PatternModel("q31_t", "in_val_decim", "Input2_q31.txt"),
+                    new PatternModel("q31_t", "in_coeff_decim", "Coefs2_q31.txt"),
+                    new PatternModel("uint32_t", "in_config_decim", "Configs2_u32.txt"),
+                    new PatternModel("q31_t", "in_val_interp", "Input3_q31.txt"),
+                    new PatternModel("q31_t", "in_coeff_interp", "Coefs3_q31.txt"),
+                    new PatternModel("uint32_t", "in_config_interp", "Configs3_u32.txt"),
+                    new PatternModel("q31_t", "ref_decim", "Reference2_q31.txt"),
+                    new PatternModel("q31_t", "ref_interp", "Reference3_q31.txt")
+                }
+            },
+
+            // F32
+            new TestModel
+            {
+                TestCodePath = "filtering/src/decim_f32.c",
+                PatternRootPath = "Filtering/DECIM/DECIMF32",
+                Patterns = new List<PatternModel>
+                {
+                    new PatternModel("uint32_t", "in_val_decim", "Input2_f32.txt"),
+                    new PatternModel("uint32_t", "in_coeff_decim", "Coefs2_f32.txt"),
+                    new PatternModel("uint32_t", "in_config_decim", "Configs2_u32.txt"),
+                    new PatternModel("uint32_t", "in_val_interp", "Input3_f32.txt"),
+                    new PatternModel("uint32_t", "in_coeff_interp", "Coefs3_f32.txt"),
+                    new PatternModel("uint32_t", "in_config_interp", "Configs3_u32.txt"),
+                    new PatternModel("uint32_t", "ref_decim", "Reference2_f32.txt"),
+                    new PatternModel("uint32_t", "ref_interp", "Reference3_f32.txt")
                 }
             },
 
@@ -132,6 +212,20 @@ namespace TestPatternConverter.Tests
                 }
             },
 
+            // F16
+            new TestModel
+            {
+                TestCodePath = "filtering/src/fir_f16.c",
+                PatternRootPath = "Filtering/FIR/FIRF16",
+                Patterns = new List<PatternModel>
+                {
+                    new PatternModel("uint16_t", "in_val", "FirInput1_f16.txt"),
+                    new PatternModel("uint16_t", "in_coeff", "FirCoefs1_f16.txt"),
+                    new PatternModel("uint16_t", "in_config", "FirConfigs1_s16.txt"),
+                    new PatternModel("uint16_t", "ref_val", "FirRefs1_f16.txt")
+                }
+            },
+
             // F32
             new TestModel
             {
@@ -159,6 +253,8 @@ namespace TestPatternConverter.Tests
                 {
                     new PatternModel("q7_t", "in_com1", "InputsA1_q7.txt"),
                     new PatternModel("q7_t", "in_com2", "InputsB1_q7.txt"),
+                    new PatternModel("q7_t", "in_partial1", "InputsA2_q7.txt"),
+                    new PatternModel("q7_t", "in_partial2", "InputsB2_q7.txt"),
                     new PatternModel("q7_t", "ref_correlate_30_31", "Reference1_q7.txt"),
                     new PatternModel("q7_t", "ref_correlate_30_32", "Reference2_q7.txt"),
                     new PatternModel("q7_t", "ref_correlate_30_33", "Reference3_q7.txt"),
@@ -208,7 +304,10 @@ namespace TestPatternConverter.Tests
                     new PatternModel("q7_t", "ref_conv_48_32", "Reference47_q7.txt"),
                     new PatternModel("q7_t", "ref_conv_48_33", "Reference48_q7.txt"),
                     new PatternModel("q7_t", "ref_conv_48_34", "Reference49_q7.txt"),
-                    new PatternModel("q7_t", "ref_conv_48_49", "Reference50_q7.txt")
+                    new PatternModel("q7_t", "ref_conv_48_49", "Reference50_q7.txt"),
+                    new PatternModel("q7_t", "ref_conv_partial_3_6_8", "Reference54_q7.txt"),
+                    new PatternModel("q7_t", "ref_conv_partial_9_6_8", "Reference55_q7.txt"),
+                    new PatternModel("q7_t", "ref_conv_partial_7_6_8", "Reference56_q7.txt")
                 }
             },
 
@@ -221,6 +320,8 @@ namespace TestPatternConverter.Tests
                 {
                     new PatternModel("q15_t", "in_com1", "InputsA1_q15.txt"),
                     new PatternModel("q15_t", "in_com2", "InputsB1_q15.txt"),
+                    new PatternModel("q15_t", "in_partial1", "InputsA2_q15.txt"),
+                    new PatternModel("q15_t", "in_partial2", "InputsB2_q15.txt"),
                     new PatternModel("q15_t", "ref_correlate_14_15", "Reference1_q15.txt"),
                     new PatternModel("q15_t", "ref_correlate_14_16", "Reference2_q15.txt"),
                     new PatternModel("q15_t", "ref_correlate_14_17", "Reference3_q15.txt"),
@@ -270,7 +371,10 @@ namespace TestPatternConverter.Tests
                     new PatternModel("q15_t", "ref_conv_32_16", "Reference47_q15.txt"),
                     new PatternModel("q15_t", "ref_conv_32_17", "Reference48_q15.txt"),
                     new PatternModel("q15_t", "ref_conv_32_18", "Reference49_q15.txt"),
-                    new PatternModel("q15_t", "ref_conv_32_33", "Reference50_q15.txt")
+                    new PatternModel("q15_t", "ref_conv_32_33", "Reference50_q15.txt"),
+                    new PatternModel("q15_t", "ref_conv_partial_3_6_8", "Reference54_q15.txt"),
+                    new PatternModel("q15_t", "ref_conv_partial_9_6_8", "Reference55_q15.txt"),
+                    new PatternModel("q15_t", "ref_conv_partial_7_6_8", "Reference56_q15.txt")
                 }
             },
 
@@ -283,6 +387,12 @@ namespace TestPatternConverter.Tests
                 {
                     new PatternModel("q31_t", "in_com1", "InputsA1_q31.txt"),
                     new PatternModel("q31_t", "in_com2", "InputsB1_q31.txt"),
+                    new PatternModel("q31_t", "in_partial1", "InputsA2_q31.txt"),
+                    new PatternModel("q31_t", "in_partial2", "InputsB2_q31.txt"),
+                    new PatternModel("q31_t", "in_levinson_durbin_3_0", "InputPhi81_q31.txt"),
+                    new PatternModel("q31_t", "in_levinson_durbin_8_1", "InputPhi82_q31.txt"),
+                    new PatternModel("q31_t", "in_levinson_durbin_11_2", "InputPhi83_q31.txt"),
+                    new PatternModel("q31_t", "in_levinson_durbin_err", "LDErrors81_q31.txt"),
                     new PatternModel("q31_t", "ref_correlate_4_1", "Reference1_q31.txt"),
                     new PatternModel("q31_t", "ref_correlate_4_2", "Reference2_q31.txt"),
                     new PatternModel("q31_t", "ref_correlate_4_3", "Reference3_q31.txt"),
@@ -362,7 +472,112 @@ namespace TestPatternConverter.Tests
                     new PatternModel("q31_t", "ref_conv_13_2", "Reference77_q31.txt"),
                     new PatternModel("q31_t", "ref_conv_13_3", "Reference78_q31.txt"),
                     new PatternModel("q31_t", "ref_conv_13_8", "Reference79_q31.txt"),
-                    new PatternModel("q31_t", "ref_conv_13_11", "Reference80_q31.txt")
+                    new PatternModel("q31_t", "ref_conv_13_11", "Reference80_q31.txt"),
+                    new PatternModel("q31_t", "ref_conv_partial_3_6_8", "Reference84_q31.txt"),
+                    new PatternModel("q31_t", "ref_conv_partial_9_6_8", "Reference85_q31.txt"),
+                    new PatternModel("q31_t", "ref_conv_partial_7_6_8", "Reference86_q31.txt"),
+                    new PatternModel("q31_t", "ref_levinson_durbin_3_0", "Reference81_q31.txt"),
+                    new PatternModel("q31_t", "ref_levinson_durbin_8_1", "Reference82_q31.txt"),
+                    new PatternModel("q31_t", "ref_levinson_durbin_11_2", "Reference83_q31.txt")
+                }
+            },
+
+            // F16
+            new TestModel
+            {
+                TestCodePath = "filtering/src/misc_f16.c",
+                PatternRootPath = "Filtering/MISC/MISCF16",
+                Patterns = new List<PatternModel>
+                {
+                    new PatternModel("uint16_t", "in_com1", "InputsA1_f16.txt"),
+                    new PatternModel("uint16_t", "in_com2", "InputsB1_f16.txt"),
+                    new PatternModel("uint16_t", "in_levinson_durbin_7_0", "InputPhi81_f16.txt"),
+                    new PatternModel("uint16_t", "in_levinson_durbin_16_1", "InputPhi82_f16.txt"),
+                    new PatternModel("uint16_t", "in_levinson_durbin_23_2", "InputPhi83_f16.txt"),
+                    new PatternModel("uint16_t", "in_levinson_durbin_err", "LDErrors81_f16.txt"),
+                    new PatternModel("uint16_t", "ref_correlate_4_1", "Reference1_f16.txt"),
+                    new PatternModel("uint16_t", "ref_correlate_4_2", "Reference2_f16.txt"),
+                    new PatternModel("uint16_t", "ref_correlate_4_3", "Reference3_f16.txt"),
+                    new PatternModel("uint16_t", "ref_correlate_4_8", "Reference4_f16.txt"),
+                    new PatternModel("uint16_t", "ref_correlate_4_11", "Reference5_f16.txt"),
+                    new PatternModel("uint16_t", "ref_correlate_5_1", "Reference6_f16.txt"),
+                    new PatternModel("uint16_t", "ref_correlate_5_2", "Reference7_f16.txt"),
+                    new PatternModel("uint16_t", "ref_correlate_5_3", "Reference8_f16.txt"),
+                    new PatternModel("uint16_t", "ref_correlate_5_8", "Reference9_f16.txt"),
+                    new PatternModel("uint16_t", "ref_correlate_5_11", "Reference10_f16.txt"),
+                    new PatternModel("uint16_t", "ref_correlate_6_1", "Reference11_f16.txt"),
+                    new PatternModel("uint16_t", "ref_correlate_6_2", "Reference12_f16.txt"),
+                    new PatternModel("uint16_t", "ref_correlate_6_3", "Reference13_f16.txt"),
+                    new PatternModel("uint16_t", "ref_correlate_6_8", "Reference14_f16.txt"),
+                    new PatternModel("uint16_t", "ref_correlate_6_11", "Reference15_f16.txt"),
+                    new PatternModel("uint16_t", "ref_correlate_9_1", "Reference16_f16.txt"),
+                    new PatternModel("uint16_t", "ref_correlate_9_2", "Reference17_f16.txt"),
+                    new PatternModel("uint16_t", "ref_correlate_9_3", "Reference18_f16.txt"),
+                    new PatternModel("uint16_t", "ref_correlate_9_8", "Reference19_f16.txt"),
+                    new PatternModel("uint16_t", "ref_correlate_9_11", "Reference20_f16.txt"),
+                    new PatternModel("uint16_t", "ref_correlate_10_1", "Reference21_f16.txt"),
+                    new PatternModel("uint16_t", "ref_correlate_10_2", "Reference22_f16.txt"),
+                    new PatternModel("uint16_t", "ref_correlate_10_3", "Reference23_f16.txt"),
+                    new PatternModel("uint16_t", "ref_correlate_10_8", "Reference24_f16.txt"),
+                    new PatternModel("uint16_t", "ref_correlate_10_11", "Reference25_f16.txt"),
+                    new PatternModel("uint16_t", "ref_correlate_11_1", "Reference26_f16.txt"),
+                    new PatternModel("uint16_t", "ref_correlate_11_2", "Reference27_f16.txt"),
+                    new PatternModel("uint16_t", "ref_correlate_11_3", "Reference28_f16.txt"),
+                    new PatternModel("uint16_t", "ref_correlate_11_8", "Reference29_f16.txt"),
+                    new PatternModel("uint16_t", "ref_correlate_11_11", "Reference30_f16.txt"),
+                    new PatternModel("uint16_t", "ref_correlate_12_1", "Reference31_f16.txt"),
+                    new PatternModel("uint16_t", "ref_correlate_12_2", "Reference32_f16.txt"),
+                    new PatternModel("uint16_t", "ref_correlate_12_3", "Reference33_f16.txt"),
+                    new PatternModel("uint16_t", "ref_correlate_12_8", "Reference34_f16.txt"),
+                    new PatternModel("uint16_t", "ref_correlate_12_11", "Reference35_f16.txt"),
+                    new PatternModel("uint16_t", "ref_correlate_13_1", "Reference36_f16.txt"),
+                    new PatternModel("uint16_t", "ref_correlate_13_2", "Reference37_f16.txt"),
+                    new PatternModel("uint16_t", "ref_correlate_13_3", "Reference38_f16.txt"),
+                    new PatternModel("uint16_t", "ref_correlate_13_8", "Reference39_f16.txt"),
+                    new PatternModel("uint16_t", "ref_correlate_13_11", "Reference40_f16.txt"),
+                    new PatternModel("uint16_t", "ref_conv_4_1", "Reference41_f16.txt"),
+                    new PatternModel("uint16_t", "ref_conv_4_2", "Reference42_f16.txt"),
+                    new PatternModel("uint16_t", "ref_conv_4_3", "Reference43_f16.txt"),
+                    new PatternModel("uint16_t", "ref_conv_4_8", "Reference44_f16.txt"),
+                    new PatternModel("uint16_t", "ref_conv_4_11", "Reference45_f16.txt"),
+                    new PatternModel("uint16_t", "ref_conv_5_1", "Reference46_f16.txt"),
+                    new PatternModel("uint16_t", "ref_conv_5_2", "Reference47_f16.txt"),
+                    new PatternModel("uint16_t", "ref_conv_5_3", "Reference48_f16.txt"),
+                    new PatternModel("uint16_t", "ref_conv_5_8", "Reference49_f16.txt"),
+                    new PatternModel("uint16_t", "ref_conv_5_11", "Reference50_f16.txt"),
+                    new PatternModel("uint16_t", "ref_conv_6_1", "Reference51_f16.txt"),
+                    new PatternModel("uint16_t", "ref_conv_6_2", "Reference52_f16.txt"),
+                    new PatternModel("uint16_t", "ref_conv_6_3", "Reference53_f16.txt"),
+                    new PatternModel("uint16_t", "ref_conv_6_8", "Reference54_f16.txt"),
+                    new PatternModel("uint16_t", "ref_conv_6_11", "Reference55_f16.txt"),
+                    new PatternModel("uint16_t", "ref_conv_9_1", "Reference56_f16.txt"),
+                    new PatternModel("uint16_t", "ref_conv_9_2", "Reference57_f16.txt"),
+                    new PatternModel("uint16_t", "ref_conv_9_3", "Reference58_f16.txt"),
+                    new PatternModel("uint16_t", "ref_conv_9_8", "Reference59_f16.txt"),
+                    new PatternModel("uint16_t", "ref_conv_9_11", "Reference60_f16.txt"),
+                    new PatternModel("uint16_t", "ref_conv_10_1", "Reference61_f16.txt"),
+                    new PatternModel("uint16_t", "ref_conv_10_2", "Reference62_f16.txt"),
+                    new PatternModel("uint16_t", "ref_conv_10_3", "Reference63_f16.txt"),
+                    new PatternModel("uint16_t", "ref_conv_10_8", "Reference64_f16.txt"),
+                    new PatternModel("uint16_t", "ref_conv_10_11", "Reference65_f16.txt"),
+                    new PatternModel("uint16_t", "ref_conv_11_1", "Reference66_f16.txt"),
+                    new PatternModel("uint16_t", "ref_conv_11_2", "Reference67_f16.txt"),
+                    new PatternModel("uint16_t", "ref_conv_11_3", "Reference68_f16.txt"),
+                    new PatternModel("uint16_t", "ref_conv_11_8", "Reference69_f16.txt"),
+                    new PatternModel("uint16_t", "ref_conv_11_11", "Reference70_f16.txt"),
+                    new PatternModel("uint16_t", "ref_conv_12_1", "Reference71_f16.txt"),
+                    new PatternModel("uint16_t", "ref_conv_12_2", "Reference72_f16.txt"),
+                    new PatternModel("uint16_t", "ref_conv_12_3", "Reference73_f16.txt"),
+                    new PatternModel("uint16_t", "ref_conv_12_8", "Reference74_f16.txt"),
+                    new PatternModel("uint16_t", "ref_conv_12_11", "Reference75_f16.txt"),
+                    new PatternModel("uint16_t", "ref_conv_13_1", "Reference76_f16.txt"),
+                    new PatternModel("uint16_t", "ref_conv_13_2", "Reference77_f16.txt"),
+                    new PatternModel("uint16_t", "ref_conv_13_3", "Reference78_f16.txt"),
+                    new PatternModel("uint16_t", "ref_conv_13_8", "Reference79_f16.txt"),
+                    new PatternModel("uint16_t", "ref_conv_13_11", "Reference80_f16.txt"),
+                    new PatternModel("uint16_t", "ref_levinson_durbin_7_0", "Reference81_f16.txt"),
+                    new PatternModel("uint16_t", "ref_levinson_durbin_16_1", "Reference82_f16.txt"),
+                    new PatternModel("uint16_t", "ref_levinson_durbin_23_2", "Reference83_f16.txt")
                 }
             },
 
@@ -375,6 +590,12 @@ namespace TestPatternConverter.Tests
                 {
                     new PatternModel("uint32_t", "in_com1", "InputsA1_f32.txt"),
                     new PatternModel("uint32_t", "in_com2", "InputsB1_f32.txt"),
+                    new PatternModel("uint32_t", "in_partial1", "InputsA2_f32.txt"),
+                    new PatternModel("uint32_t", "in_partial2", "InputsB2_f32.txt"),
+                    new PatternModel("uint32_t", "in_levinson_durbin_3_0", "InputPhi81_f32.txt"),
+                    new PatternModel("uint32_t", "in_levinson_durbin_8_1", "InputPhi82_f32.txt"),
+                    new PatternModel("uint32_t", "in_levinson_durbin_11_2", "InputPhi83_f32.txt"),
+                    new PatternModel("uint32_t", "in_levinson_durbin_err", "LDErrors81_f32.txt"),
                     new PatternModel("uint32_t", "ref_correlate_4_1", "Reference1_f32.txt"),
                     new PatternModel("uint32_t", "ref_correlate_4_2", "Reference2_f32.txt"),
                     new PatternModel("uint32_t", "ref_correlate_4_3", "Reference3_f32.txt"),
@@ -454,7 +675,13 @@ namespace TestPatternConverter.Tests
                     new PatternModel("uint32_t", "ref_conv_13_2", "Reference77_f32.txt"),
                     new PatternModel("uint32_t", "ref_conv_13_3", "Reference78_f32.txt"),
                     new PatternModel("uint32_t", "ref_conv_13_8", "Reference79_f32.txt"),
-                    new PatternModel("uint32_t", "ref_conv_13_11", "Reference80_f32.txt")
+                    new PatternModel("uint32_t", "ref_conv_13_11", "Reference80_f32.txt"),
+                    new PatternModel("uint32_t", "ref_conv_partial_3_6_8", "Reference84_f32.txt"),
+                    new PatternModel("uint32_t", "ref_conv_partial_9_6_8", "Reference85_f32.txt"),
+                    new PatternModel("uint32_t", "ref_conv_partial_7_6_8", "Reference86_f32.txt"),
+                    new PatternModel("uint32_t", "ref_levinson_durbin_3_0", "Reference81_f32.txt"),
+                    new PatternModel("uint32_t", "ref_levinson_durbin_8_1", "Reference82_f32.txt"),
+                    new PatternModel("uint32_t", "ref_levinson_durbin_11_2", "Reference83_f32.txt")
                 }
             }
         };
