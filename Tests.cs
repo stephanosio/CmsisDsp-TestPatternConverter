@@ -28,10 +28,11 @@ namespace TestPatternConverter
         public static BayesTest BayesTest { get; } = new BayesTest();
         public static SvmTest SvmTest { get; } = new SvmTest();
         public static InterpolationTest InterpolationTest { get; } = new InterpolationTest();
+        public static QuaternionMathTest QuaternionMathTest { get; } = new QuaternionMathTest();
 
         public static Test Tests =>
             BasicMathTest + ComplexMathTest + FastMathTest + MatrixTest + DistanceTest +
             TransformTest + SupportTest + StatisticsTest + FilteringTest + BayesTest + SvmTest +
-            InterpolationTest;
+            InterpolationTest + QuaternionMathTest;
     }
 }
